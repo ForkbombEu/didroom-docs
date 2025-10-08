@@ -1,6 +1,6 @@
 ---
-title: Microservices Deployment
-order: 40
+title: Provisioning and deployment
+order: 100
 ---
 # Microservice Provisioning & Deployment
 

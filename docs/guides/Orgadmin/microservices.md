@@ -1,5 +1,5 @@
 ---
-title: Microservices
+title: Microservice Setup
 order: 40
 ---
 

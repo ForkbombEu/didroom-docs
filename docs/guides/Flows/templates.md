@@ -1,5 +1,5 @@
 ---
-title: 🧩 Templates
+title: Templates
 order: 20
 ---
 

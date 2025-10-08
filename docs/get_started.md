@@ -37,19 +37,16 @@ Below, you'll find detailed descriptions of each guide, carefully curated to emp
 >
 > - [Setup an instance](/guides/Sysadmin/setup)
 > - [Self host the dashboard](/guides/Sysadmin/setup)
-> - [Deploy microservices](/guides/Sysadmin/deploy_microservices.md)
+> - [Provision and deploymentDeployment](/guides/Orgadmin/microservices-provision-deployment.md)
 
 > [!IMPORTANT] Organization administrators
 > For folks that wants to oversee the configuration and management of decentralized identity solutions within their organizations. Here you'll find instructions on how to use the Dashboard to configure settings, monitor your issuance flows, and access key functionalities.
 >
-> - [Setup a credential issuer](/guides/Orgadmin/credential_issuer.md)
-> - [Setup an authorization server](/guides/Orgadmin/auth_server.md)
-> - [Create issuance flows](/guides/Orgadmin/issuance_flow.md)
-> - [Create verification flows](/guides/404)
+> - [Setup a credential issuer](/guides/Flows/integration-with-3rd-party.html#_3-issuance-template-—-build-the-credential-claims)
+> - [Setup an authorization server](/guides/Flows/integration-with-3rd-party.html#_2-authorization-template-—-collect-call-external-api)
+> - [Create issuance/Verification flows](/guides/Flows/flows.html)
 > - [Generate microservices from the dashboard](/guides/404)
-> - [Add custom business logic for credential issuing](/guides/404)
-> - [Add custom business logic for authorization](/guides/404)
-> - [Create an organization](/guides/Orgadmin/create.md)
+> - [Add custom business logic for issuance/verifiation](/guides/Flows/integration-with-3rd-party.html)
 
 > [!WARNING] Wallet holders
 >
@@ -57,8 +54,6 @@ Below, you'll find detailed descriptions of each guide, carefully curated to emp
 >
 > - [Install the Wallet](/guides/Wallet/wallet.html#install-the-app)
 > - [Create an identity / keyring](/guides/Wallet/sign-up.md)
-> - [Request a credential](/guides/Wallet/get_credential.md)
-> - [Present a credential](/guides/Wallet/present_credential.md)
 > - [Get part to an organization](/guides/Wallet/join_org.md)
 > - [Define preferences](/guides/Wallet/preferences.md)
 
@@ -66,10 +61,7 @@ Below, you'll find detailed descriptions of each guide, carefully curated to emp
 >
 > For individuals that wants to utilize the Verifier App to verify the authenticity and validity of decentralized identities and digital credentials. Here we outlines how to install and use the Verifier App to validate identity claims and ensure compliance with regulatory requirements.
 >
-> - [Install the Verifier](/guides/Verifier/verifier.html#install-the-app)
-> - [Get part of an organization](/guides/Verifier/join_org.md)
-> - [Select a verification flow](/guides/Verifier/verification_flow.md)
-> - [Verify a credential](/guides/Verifier/verify.md)
+> - [The Verifier Web App](/guides/Verifier/web-verifier.md)
 
 <style>
 :root {

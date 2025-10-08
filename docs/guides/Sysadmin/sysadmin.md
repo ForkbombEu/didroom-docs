@@ -23,4 +23,4 @@ Explore the process of self-hosting the DiDRoom dashboard to gain full control o
 
 Discover how to deploy DiDRoom microservices to enable various functionalities and services within your organization.
 
-- [Deploy Microservices Guide](./deploy_microservices.md)
+- [Deploy Microservices Guide](/guides/Orgadmin/microservices-provision-deployment.md)

@@ -20,7 +20,7 @@ Once you are happy with the Templated and Flows you created, you can start deplo
 
 1. Downloading the provisioned Microservices by pressing the *Dowload microservices* button. 
 1. Upload the download .zip to the server where the Microservices will deployed, which responds to the Endpoint you previously configured.
-1. Follow the instructions in the [Sysadmin](../Sysadmin/deploy_microservices.html) section or just use the docker-compose file (typically doing 
+1. Follow the instructions in the [Provision and deploymentDeployment](../Orgadmin/microservices-provision-deployment.html) section or just use the docker-compose file (typically doing 
 
 ```bash
 docker-compose up

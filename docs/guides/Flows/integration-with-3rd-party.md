@@ -13,7 +13,7 @@ The DIDroom dashboard brings together everything required to configure and run *
 
 This view is the entry point for any integration: from here you create templates, link them into flows, and deploy the corresponding microservices.
 
-`[![Dashboard Overview](../../images/dashboard-overview.png)]`
+![Dashboard Overview](../../images/dashboard-overview.png)
 
 
 ## 2) Authorization Template — Collect & Call External API
@@ -24,14 +24,31 @@ This allows DIDroom to validate or enrich credential data before issuance.
 
 Example — calling an external REST API (e.g., KoboToolbox):
 
+Zencode script
+
 ```
 zencode
-Scenario 'authorization'
-  Given I have a 'request' named 'form'
-  Given I have a 'string' named 'token'
-  When I set the HTTP header 'Authorization' to 'Bearer ' + token
-  When I do a POST request to 'https://api.example.org/submissions/' with body from 'form'
-  Then save the HTTP 'response' into 'authorization.result'
+Given I have a 'string' named 'code'
+Given I have a 'string dictionary' named 'discount_codes'
+
+When I verify 'code' is found in 'discount_codes'
+
+When I create the 'string dictionary' named 'data'
+When I create copy of object named by 'code' from dictionary 'discount_codes'
+When I move 'copy' to 'discount' in 'data'
+
+Then print the 'data'
+```
+Zencode data (JSON)
+
+```
+{
+	"discount_codes": {
+		"ten": "10",
+		"twenty": "20",
+		"all": "100"
+	}
+}
 ```
 
 ### → Flow: Authorization → Issuance
@@ -124,9 +141,9 @@ Each microservice hosts its **OpenID4VCI** or **OpenID4VP** endpoints and execut
 - Each service embeds its linked templates and flow configuration at build time.
 
 
-`[![Download Microservice](../../images/integrating-microservices-download-curl.png)]`
+![Download Microservice](../../images/integrating-microservices-download-curl.png)
 
-`[![cURL excerpt](../../images/integrating-microservices-download-curl-excerpt.png)]`
+![cURL excerpt](../../images/integrating-microservices-download-curl-excerpt.png)
 
 ---
 
@@ -178,7 +195,7 @@ The DIDroom integration flow connects templates, flows, and microservices to ena
    - Download and run the Authorization Server, Credential Issuer, and Verifier.
    - Serve them behind Caddy or another reverse proxy with HTTPS enabled.
 
-`[![Credential Output](../../images/issuance-flow-qr.png)]`
+![Credential Output](../../images/issuance-flow-qr.png)
 
 ---
 

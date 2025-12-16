@@ -11,30 +11,34 @@ Component variants and tokens are documented in Storybook → https://forkbombeu
 ---
 
 ## Prerequisites
-
 - OS: Linux or macOS (bash/zsh)
-- Node.js: v18+ (LTS recommended)
-- PNPM: v8+
-
-  ```bash
-  corepack enable
-  corepack prepare pnpm@latest --activate
-  ```
-
 - Git + GitHub account (access to Forkbomb repos)
 - Android tooling:
   - Android Studio (latest), Android SDK, at least one emulator (API 30+)
-  - Java 17+ (e.g., Temurin/OpenJDK 17)
 - Capacitor/Ionic CLIs are invoked via package scripts (no global install needed)
-
-> Quick check:
-
-> ```bash
-> node -v
-> pnpm -v
-> java -version
-> adb version
-> ```
+### Using mise (Recommended)
+[mise](https://mise.jdx.dev/) is a polyglot tool version manager that automatically manages Node.js, Java, Gradle, and pnpm versions. The project includes a `.tool-versions` file that specifies all required versions.
+1. **Install and setup mise:**  
+   Follow the instructions at https://mise.jdx.dev/getting-started.html
+2. **Install all required tools automatically:**
+   ```bash
+   cd ~/work/didroom/wallet
+   mise install
+   # This reads .tool-versions and installs:
+   # - Java OpenJDK 21
+   # - Gradle 8
+   # - Node.js 20.11.1
+   # - pnpm 9
+    ```
+3. **Verify installations:**
+   ```bash
+   node -v        # should show v20.11.1
+   pnpm -v        # should show v9.x.x
+   java -version  # should show version 21
+   gradle -v      # should show version 8.x
+   adb version
+    ```
+**Note:** mise will automatically use the correct versions when you're in the wallet directory. No need to manually switch versions.
 
 ---
 
